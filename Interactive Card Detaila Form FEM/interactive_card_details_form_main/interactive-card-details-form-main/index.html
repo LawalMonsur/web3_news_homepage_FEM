@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img src="images/bg-main-desktop.png" alt="" class="bg-img">
+  <img src="images/bg-main-mobile.png" alt="" class="bg-img-xs">
+  <div class="container">
+
+    <section class="card_display">
+      <div class="card_front">
+        <img src="images/bg-card-front.png" alt="" class="card_front_img">
+        <img src="images/card-logo.svg" alt="" class="card_logo">
+    
+        <p class="cardnumber_display">0000 0000 0000 0000</p>
+        <p class="cardholder_display">Jane Appleseed</p>
+        <p class="expiry_month_display">00</p>
+        <p class="expiry_divider_display">/</p>
+        <p class="expiry_year_display">00</p>
+      </div>
+
+      <div class="card_back">
+        <img src="images/bg-card-back.png" alt="" class="card_back_img">
+        <p class="cvc_display">000</p>
+    </section>
+
+    <section class="card_details">
+      <form action="/action_page.php" id="myForm" class="myForm">
+      <label for="cardholder_name">Cardholder Name</label>
+      <input 
+      id="cardholder_name" 
+      class="cardholder_name"
+      type="text"
+      placeholder=" e.g. Jane Appleseed" 
+      oninput="inputName()">
+      <p id="errorMsg"></p>
+      
+      <label for="card_number">Card Number</label>
+      <input 
+      id="card_number" 
+      class="card_number"
+      type="number"
+      placeholder=" e.g. 1234 5678 9123 0000" 
+      oninput="inputCaerdNum()">
+      <p id="card_num_error"></p>
+      <!-- <input type="number" id="card_number" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" required> -->
+      
+      <div class="flex">
+
+        <label for="expiry_date" class="expiry_date">Exp. Date (MM/YY) <br>
+        <input 
+        type="text" 
+        class="expiry" 
+        name="expiry_date" 
+        placeholder="MM" 
+        oninput="inputMM()">
+
+        <input 
+        type="text" 
+        class="expiry" 
+        name="expiry_date" 
+        placeholder="YYYY" 
+        oninput="inputYY()">
+        <p id="expiry_error"></p>
+        </label>
+
+        <label for="cvc" class="cvc">CVC <br>
+          <input 
+          class="cvc"
+          id="cvc" 
+          type="text" name="cvc" 
+          placeholder="e.g. 123" 
+          oninput="inputCvc()">
+          <p id="error-cvc"></p>
+        </label>
+      </div>
+
+      <button id="submit">Confirm</button>
+      </form>
+
+      <div id="thank_you" class="thank_you hidden">
+        <img src="images/icon-complete.svg" alt="">
+        <h2 id="thank_you_header">Thank you!</h2>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <!-- Completed state start -->
+
+  
+  
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Monsur Lawal</a>.
+  </div>
+</body>
+</html>
