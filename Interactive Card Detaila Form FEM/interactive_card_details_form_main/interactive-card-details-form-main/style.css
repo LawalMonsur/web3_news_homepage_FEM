@@ -80,15 +80,21 @@ body{
     text-transform: uppercase;
 }
 
-.expiry_month_display, .expiry_divider_display{
+.expiry_month_display{
     bottom: 30px;
     right: 85px;
     font-size: 0.9em;
 }
 
+.expiry_divider_display{
+    bottom: 30px;
+    right: 78px;
+    font-size: 0.9em;
+}
+
 .expiry_year_display{
     bottom: 30px;
-    right: 30px;
+    right: 56px;
     font-size: 0.9em;
 }
 
@@ -132,7 +138,7 @@ input:invalid {
     border: 1px solid hsl(0, 100%, 66%);
   }
 
-#errMsg, #card_num_error, #expiry_error, #error-cvc{
+#cardholder_error, #card_num_error, #expiry_error, #cvc_error{
     color: hsl(0, 0%, 100%);
     font-size: 12px;
     font-weight: 500;
@@ -154,7 +160,7 @@ input:invalid {
 .flex .cvc{
     width: 135px;
 }
-input .expiry, input .cvc{margin-top: 5px;}
+input.expiry, input.cvc{margin-top: 5px;}
 
 .card_details{
     display: flex;
@@ -232,7 +238,7 @@ button:hover{
   }
   
   /* 375px */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1200px) {
     body{flex-direction: column;}
     /* .container{flex-direction: column;} */
     .bg-img{display: none;}
@@ -254,8 +260,9 @@ button:hover{
     }
     form {
       max-width: 250px;
-      right: 30px;
+      /* right: 30px; */
       top: 10px;
+      justify-content: center;
     }
     input {
       max-width: 250px;
@@ -282,16 +289,18 @@ button:hover{
     .cardholder_display {
       bottom: 20px;
     }
+    .expiry_month_display {
+        right: 71px;
+        bottom: 20px;
+      }
     .expiry_divider_display {
       right: 65px;
       bottom: 20px;
     }
-    .expiry_month_display {
-      right: 72px;
-      bottom: 20px;
-    }
+    
     .expiry_year_display {
       bottom: 20px;
+      right: 50px;
     }
     section.card_details {
       position: relative;
